@@ -6,7 +6,8 @@
 Dependencies: Same as the original implementation, but code is based on Python and Pytorch.(0.4.1)
 #### Implementation and run:
 
-* download data: $ sh ./download_dataset.sh horse2zebra
+* download data: 
+> $ sh ./download_dataset.sh horse2zebra
 * Training and testing: 
 
 > $ python main.py --training True
