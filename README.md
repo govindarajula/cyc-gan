@@ -2,16 +2,15 @@
 
 ### Tasks:
 
-The task of this project can be split into two stages.
+The task of this project can be split into two stages:
 
-1. We focus on re-implementing and scaling the pre-trained models from the authors to study and explore various applications of Cyc-GAN model. 
+1. Focus on re-implementing and scaling the pre-trained models from the authors to study and explore various applications of Cycle-GAN.
 
-> For the scope of this project, (and since using MacOS) most of the training and implementation has been done in AWS-based Linux AMI, after setup of the dependencies and tools.
+> For the scope of this project (as we used MacOS) most of the training and implementation has been done in AWS-based Linux AMI, after setup of the dependencies and tools upon GPU.
 
-2. Develop some modifications and a proposal for the architecture. I built a simpler version of the whole model, and the code is accesible in [simple-cg]() directory. 
 
-3. 
-
+2. Develop some modifications and a proposal for the architecture. I built a simpler version of the whole model, and the code is accesible in [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) directory. 
+ 
 Input: The models take a collection of mages from various datasets, based on our use-case (ususally generated from ImageNet)
 Output: An image generated to match the target data, by replicating the style and features as desired.
 
@@ -32,7 +31,7 @@ Here we use ControlGan as our backbone network to generate high-quality and cont
 ![](https://github.com/mrlibw/ControlGAN/raw/master/archi.jpg)
 
 
-### Pretrained models
+## Pretrained models
 
 #### Pretrained DAMSM Model
 - [DAMSM for bird](https://drive.google.com/file/d/1dbdCgaYr3z80OVvISTbScSy5eOSqJVxv/view?usp=sharing). Download and save it to `DAMSMencoders/`
@@ -43,11 +42,11 @@ Here we use ControlGan as our backbone network to generate high-quality and cont
 - [ControlGAN for coco](https://drive.google.com/file/d/1Id5AMUFngoZ9Aj-EhMuc590Sv8E3tXjX/view?usp=sharing). Download and save it to `models/`
 
 
-### Training Phase
+## Training Phase
 
 To train a ControlGAN, before execute the orders in the instructions below, you should unzip the archive file and then enter the folder `code`.
 
-#### [DAMSM](https://github.com/taoxugit/AttnGAN) model includes text encoder and image encoder
+### [DAMSM](https://github.com/taoxugit/AttnGAN) model includes text encoder and image encoder
 - Pre-train DAMSM model for bird dataset:
 ```
 python pretrain_DAMSM.py --cfg cfg/DAMSM/bird.yml --gpu 0
@@ -56,7 +55,7 @@ python pretrain_DAMSM.py --cfg cfg/DAMSM/bird.yml --gpu 0
 ```
 python pretrain_DAMSM.py --cfg cfg/DAMSM/coco.yml --gpu 0
 ```
-#### ControlGAN model 
+### ControlGAN model 
 - Train ControlGAN model for bird dataset:
 ```
 python main.py --cfg cfg/train_bird.yml --gpu 0
@@ -69,7 +68,7 @@ python main.py --cfg cfg/train_coco.yml --gpu 0
 `*.yml` files include configuration for training and testing.
 
 
-### Testing Phase
+## Testing Phase
 
 - Test ControlGAN model for bird dataset:
 ```
@@ -81,12 +80,12 @@ python main.py --cfg cfg/eval_coco.yml --gpu 0
 ```
 
 
-## Text To Image -- The App
+### Text To Image -- The App
 
 
 ![](imgs/controlgan.gif)
 
-### Server side
+#### Server side
 
 The backend server can be set up on any computer with at least one GPU on it. First, you should use docker to pull down the docker image:
 
@@ -138,7 +137,7 @@ The corresponding output for the example input in the above table is:
 
 ![](imgs/example_output.png)
 
-### Cloud side
+#### Cloud side
 
 
 Our React-Native App is running on the Expo. 
@@ -153,12 +152,12 @@ Download an Expo Client. Open Expo Client on your device. Scan the QR code print
 
 
 
-## Reference
+### Reference
 
 - Lee, Minhyeok, and Junhee Seok. "Controllable generative adversarial network." IEEE Access 7 (2019): 28158-28169.
 - Xu, Tao, et al. "Attngan: Fine-grained text to image generation with attentional generative adversarial networks." Proceedings of the IEEE conference on computer vision and pattern recognition. 2018.
 
-## Links
+### Links
 - [Cycle-GAN repo](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 
 - [Torch-version](https://github.com/junyanz/CycleGAN)
