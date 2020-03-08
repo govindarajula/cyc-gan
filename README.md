@@ -23,6 +23,12 @@ Output: An image generated to match the target data, by replicating the style an
 
 * [Dockerfile](Dockerfile)
 
+## Requirements / Prerequisites:
+* Linux or macOS
+* Python 3
+* CPU or NVIDIA GPU + CUDA CuDNN
+
+The simpler version harnesses Pytorch with CPU compute power, but can be set to GPU training based on CUDA configuration of local machine.
 
 ## Architecture
 The baseline model used is CycleGan model, to generate the images in desired style palette from input data. The underlying structure 
