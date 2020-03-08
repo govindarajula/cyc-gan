@@ -4,9 +4,9 @@
 * Instead of implemeneting multiple things at once, we can make an easier implementation as shown in this sub-directory(simple-cg).
 
 Dependencies: Same as the original implementation, but code is based on Python and Pytorch.(0.4.1)
-#### Implementation and run:## How to run
-* download data: $ sh ./download_dataset.sh horse2zebra
+#### Implementation and run:
 
+* download data: $ sh ./download_dataset.sh horse2zebra
 * Training and testing: 
 
 > $ python main.py --training True
