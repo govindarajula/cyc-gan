@@ -1,5 +1,35 @@
 ## Cycle-consistent Style Transfer (Cycle-GAN)
 
+### Project outline:
+
+1. Intro and pipeline: 
+
+The goal and deliverables of this project relied hevaily on harnessing Cycle-GAN architecture and improving upon the aspects of trainign and image generation for a particular use case.
+> For the scope of this project (as we used MacOS) most of the training and implementation has been done in AWS-based Linux AMI, after setup of the dependencies and tools upon GPU.
+
+2. A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) has modified architecture, with helper and util fucntions, pre-trained models and 
+
+3. Input: The models take a collection of mages from various datasets.
+   * Based on h2z, summer-winter dataset,   (ususally generated from ImageNet).
+
+4. Outputs: An image generated to match the target data, by replicating the style and features of the other data of images.
+
+### Deliverables
+* [Code](https://github.com/gvsakashb/cyc-gan/afadf/) 
+* Improved model and proposal (simple-cg & ipynb files)
+* Final Report
+* [AMI image](https://hub.docker.com/repository/docker/mayukuner/text2img), with results / ready to train further.
+* Access Key for the image (submitted along with report & results)
+
+* [Dockerfile](Dockerfile)
+
+### Requirements / Prerequisites:
+* Linux or macOS
+* Python 3
+* CPU or NVIDIA GPU + CUDA CuDNN
+
+The simpler version harnesses Pytorch with CPU compute power, but can be set to GPU training based on CUDA configuration of local machine.
+
 ### Tasks:
 
 The task of this project can be split into two stages:
@@ -14,30 +44,18 @@ The task of this project can be split into two stages:
 Input: The models take a collection of mages from various datasets, based on our use-case (ususally generated from ImageNet)
 Output: An image generated to match the target data, by replicating the style and features as desired.
 
-## Deliverables
-* [Code](https://github.com/gvsakashb/cyc-gan/afadf/) 
-* Improved model and proposal (simple-cg & ipynb files)
-* Final Report
-* [AMI image](https://hub.docker.com/repository/docker/mayukuner/text2img), with results / ready to train further.
-* Access Key for the image (submitted along with report & results)
 
-* [Dockerfile](Dockerfile)
-
-## Requirements / Prerequisites:
-* Linux or macOS
-* Python 3
-* CPU or NVIDIA GPU + CUDA CuDNN
-
-The simpler version harnesses Pytorch with CPU compute power, but can be set to GPU training based on CUDA configuration of local machine.
 
 ## Architecture
-The baseline model used is CycleGan model, to generate the images in desired style palette from input data. The underlying structure 
+The baseline model used is CycleGan model, to generate the images in desired style palette from input and target datasets. The underlying structure is as follows:
 
-Here we use ControlGan as our backbone network to generate high-quality and controllable images from user inputs. The structure of ControlGAN is as follows.
 ![](https://github.com/mrlibw/ControlGAN/raw/master/archi.jpg)
 
 
-## Pretrained models
+#### Observations and results (Re-implementation/pre_trained models):
+
+* 
+
 
 #### Pretrained DAMSM Model
 - [DAMSM for bird](https://drive.google.com/file/d/1dbdCgaYr3z80OVvISTbScSy5eOSqJVxv/view?usp=sharing). Download and save it to `DAMSMencoders/`
@@ -168,4 +186,4 @@ Download an Expo Client. Open Expo Client on your device. Scan the QR code print
 
 - [Torch-version](https://github.com/junyanz/CycleGAN)
 
-- A PyTorch [colab notebook](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb) is also available for exploring and training.
+- A PyTorch [colab notebook](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb) is also available for exploring and training on GCP.
