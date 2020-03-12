@@ -8,11 +8,13 @@ These are a few links which are tangential to the core topic, but interesting to
 
 * github.com/PramuPerera/In2I (recent code - better scores at unpaired img-to-img translation than cycle-gan)
 
-* web.stanford.edu/~jaustinb/papers/CS236.pdf (sim2real)
+* [Sim2Real paper](web.stanford.edu/~jaustinb/papers/CS236.pdf)
 
-* downloads.hindawi.com/journals/scn/2019/4932782.pdf (data hiding)
+* [Data hiding](downloads.hindawi.com/journals/scn/2019/4932782.pdf)
 
-* arxiv.org/pdf/1712.02950.pdf (stenography)
+* [Stenography](arxiv.org/pdf/1712.02950.pdf)
+
+* Detailed [version](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/cycle-gan) with architecture design & loss function plots.
 
 Beyond the scope of the project submitted, an extension upon these domains can be done.
 
