@@ -4,33 +4,44 @@
 
 1. Intro and pipeline: 
 
-The goal and deliverables of this project relied hevaily on harnessing Cycle-GAN architecture and improving upon the aspects of trainign and image generation for a particular use case.
+The goal and deliverables of this project relied hevaily on harnessing Cycle-GAN architecture and improving upon the aspects of training and image generation for a particular use case.
 > For the scope of this project (as we used MacOS) most of the training and implementation has been done in AWS-based Linux AMI, after setup of the dependencies and tools upon GPU.
+ * Scaled and re-implemented the model for horse2zebra, yosemite and style-transfer(Ukiyoe) datasets.
+ * Parameter tuning and tabulated results agaisnt varying traina and test conditions. 
+  > --model, --netG, --norm, epochs, lr have been explored agaisnt pre-trained and recursive loops for cyclic iterations.
+ * Reconstruction and generation of input data has been achieved with improvements.
+   a. Detail and crisp/clarity has been observed.
+   b. Dehazing and reduction of noise is demonstrated upon introducing the proposed loss function.
+   
+ 
+2. Modifications:
+A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) has modified architecture, (with helper and util functions, pre-trained models narrowed down to 4 .py files). This model has achieved significantly higher detail in images generated and has been used to tabulate and study loss (D, G) for comparative analytics agaisnt change of architecture.
 
-2. A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) has modified architecture, with helper and util fucntions, pre-trained models and 
+* Pre-trained and reimplementation has some modified code which achieved better with a colo-rbased loss term, thereby tackling issue of hue/tint in style-transfer image data.
+* One implementation with pre-initialized weights is also studied to note theat convergence occurs faster.
+* Metrics like IoU score, accuracy, quality etc. have achieved comparable results to the BAIR presentation / model.
 
 3. Input: The models take a collection of mages from various datasets.
-   * Based on h2z, summer-winter dataset,   (ususally generated from ImageNet).
 
 4. Outputs: An image generated to match the target data, by replicating the style and features of the other data of images.
 
-### Deliverables
-* [Code](https://github.com/gvsakashb/cyc-gan/afadf/) 
-* Improved model and proposal (simple-cg & ipynb files)
-* Final Report
-* [AMI image](https://hub.docker.com/repository/docker/mayukuner/text2img), with results / ready to train further.
-* Access Key for the image (submitted along with report & results)
 
-* [Dockerfile](Dockerfile)
+
+### Deliverables
+* Repository Code - Notebooks & files under 'reimplement'
+* Improved model and code ([simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg))
+* [AMI image](https://hub.docker.com/repository/docker/mayukuner/text2img), with results / ready to train further.
+* Access Key for the EC2 instance / image (*.pem file*)
+* [Final report]()
 
 ### Requirements / Prerequisites:
 * Linux or macOS
 * Python 3
-* CPU or NVIDIA GPU + CUDA CuDNN
+* CPU[slower] or NVIDIA GPU + CUDA CuDNN
 
-The simpler version harnesses Pytorch with CPU compute power, but can be set to GPU training based on CUDA configuration of local machine.
+The simpler version harnesses Pytorch with CPU compute power, but can be set to GPU training based on CUDA configuration of local machine. It is highly suggested to use GPU-supported systems.
 
-### Tasks:
+### Tasks / Improvement:
 
 The task of this project can be split into two stages:
 
@@ -47,9 +58,9 @@ Output: An image generated to match the target data, by replicating the style an
 
 
 ## Architecture
-The baseline model used is CycleGan model, to generate the images in desired style palette from input and target datasets. The underlying structure is as follows:
+The baseline model used is CycleGan model, (to generate the images in desired style palette from input and target datasets) is shown below:
 
-![](https://github.com/mrlibw/ControlGAN/raw/master/archi.jpg)
+<img src="https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/G-and-D.png" width="450"><img src="https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/network.png" width="450">
 
 
 #### Observations and results (Re-implementation/pre_trained models):
@@ -161,19 +172,27 @@ The corresponding output for the example input in the above table is:
 
 ![](imgs/example_output.png)
 
-#### Cloud side
+#### Cloud side (AWS)
+Most of my work and the implementation was hosted on an AWS AMI. The snapshot is available for copy. There are two ways to set up your environment.
 
+* The Amazon Machine Image (AMI) has been listed in deliverables. Kindly use the same for faster compute & testing.
+* Please ensure dependencies of Pytroch and CUDA are working before training / testing.
 
-Our React-Native App is running on the Expo. 
+1. Running from Linux AMI:
+	* Pulic AMI-ID: `ami-018b10d93f5a1041e`.
+	* Check dependencies before first run.
+  ```
+  nvcc --version (CUDA check)
+  pip install torch torchvision (PyTorch check & install) 
+  ```
+  * Some of the notebooks have the code (#commented out) for subsequent runs. Please uncomment and run in case of loading and initial run of the files. 
 
-```
-cd text2image_app
-yarn install
-expo start
-```
+2. Setting your own environemnt
+	
+* Run the models as given is testing on a smaller subest of images for exploring latency and loss calculations. This can be later expanded to full dataset after trainign of model.
+* Tuning and changes to parameters can be done in jupyter as well as .py files based on changes to be made.
 
-Download an Expo Client. Open Expo Client on your device. Scan the QR code printed by expo start with Expo Client (Android) or Camera (iOS). You may have to wait a minute while your project bundles and loads for the first time.
-
+> The EC2 instance can be shared for evaluation if neeeded as well. Cloning this repository on a machine with GPU support is an ideal way to run locally, but AMI can be used to study my results.
 
 
 ### Reference
@@ -183,7 +202,7 @@ Download an Expo Client. Open Expo Client on your device. Scan the QR code print
 
 ### Links
 - [Cycle-GAN repo](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-
 - [Torch-version](https://github.com/junyanz/CycleGAN)
-
-- A PyTorch [colab notebook](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb) is also available for exploring and training on GCP.
+- GCP [colab notebook](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb).
+- A version to study the baseline architecture and plots of loss functions is [available](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/cycle-gan).
+- bair.berkeley.edu/blog/2019/12/13/humans-cyclegan (BAIR blog with recent updates)
