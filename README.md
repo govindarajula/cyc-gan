@@ -71,9 +71,8 @@ Install the dependencies:
 
 To train a CycleGAN, before execute the orders in the instructions below, the approach varies if you cloned or are running on AMI.
 
-
-
-#### Pre-trained models can be loaded as follows:
+#### Pre-trained models can be loaded.
+Preprocessing involves harnessing the scripts provided from original directory for training and setup of our model.
 ```
 !bash ./scripts/download_cyclegan_model.sh monet2photo
 ```
@@ -81,7 +80,7 @@ The datset can be specified at the end as shown. This can be done pre-emptively 
 * Reimplementation has mostly capitalized on this approach, with modfications and tuning of parameters is done for train.py and the scripts files.
 * Run of pre-trained models has a lot of noise and this is improved by the changes done and training over a large amount of images with more epochs.
 
-<img src='https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/style-initial.png' height=300>
+<img src='https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/style-initial.png' height=250>
 
 #### Training:
 
@@ -93,10 +92,6 @@ The datset can be specified at the end as shown. This can be done pre-emptively 
 
 * For the newer version (simple-cg), the readme inside the folder details more about how to train the model, and tweaks can be done in train.py file.
 * This model avoids the pre-trained and options/util and other files and provides more incentive to change and tune for the user, hence simplifying approach as we generate better results at improved latency.
-
-* Initial runs & results:
-
-* Modifications done:
 
 ### Testing Phase
 
@@ -121,8 +116,8 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 	* Pulic AMI-ID: `ami-018b10d93f5a1041e`.
 	* Check dependencies before first run.
   	```
-	nvcc --version (CUDA check)
-	pip install torch torchvision (PyTorch check & install) 
+	nvcc --version
+	pip install torch torchvision 
 	```
 	* Some of the notebooks have the code (#commented out) for subsequent runs. Please uncomment and run in case of loading and initial run of the files. 
   	> This can be checked based on errors showing loading of pre-trained models.
@@ -135,7 +130,7 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 #### Observations and results (Re-implementation/pre_trained models):
 
-* Please refer the [report]() for a detailed explanation about the changes in code and results.
+* Please refer the [report](report/adl-report.pdf) for a detailed explanation about the changes in code and results.
 * Overall, we can state the following:
 	1.
 	2.
@@ -143,8 +138,8 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 	4.
 	5.
 * Specific to the proposed simple-cg model, we observe:
-	1. 
-	2.
+	1. The training results are better for instance normalization, with better clarity in images for subsequent model runs.
+	2. 
 	3.
 	
 
