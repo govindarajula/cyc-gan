@@ -25,9 +25,9 @@ Along with changes done while training upon the original repo code, changes betw
 ( Real - Generated - Reconstructed)
 
 <p float="left">
-  <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/images/horse_real.png" width="200" />
-  <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/images/zebra_generated.png" width="200" />
-  <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/images/horse_reconstructed.png" width="200" />
+  <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/horse_real.png" width="200" />
+  <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/zebra_generated.png" width="200" />
+  <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/horse_reconstructed.png" width="200" />
 </p>
 
 > Links:
