@@ -54,12 +54,16 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 
 <br><br><br>
 ### Cloning and use:
-* Clone this repo:
+Clone this repo:
 ```
 git clone https://github.com/gvsakashb/cyc-gan
 cd cyc-gan
 ```
-* Install the dependencies:
+Install the dependencies:
+* cd into reimplement to check for dependencies `cd reimplement`
+* For pip users, please type the command `pip install -r requirements.txt`.
+* Install PyTorch (pytorch.org) and ensure CUDA is setup on your device with necessary support `nvcc --version` (verify).
+
 
 
 
