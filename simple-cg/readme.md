@@ -1,9 +1,10 @@
-### Simpler version in contrast to official-repo
+### Simpler version
 
 * While deploying and training the official models against various datasets, a simpler arhcitecture of the model was explored.
-* Instead of implemeneting multiple things at once, we can make an easier implementation as shown in this sub-directory(simple-cg).
+* Instead of implemeneting multiple things at once, we can make an easier implementation as shown in this sub-directory (simple-cg).
 
 Dependencies: Same as the original implementation, but code is based on Python and Pytorch.(0.4.1)
+
 #### Implementation and run:
 
 * download data: 
