@@ -50,7 +50,7 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 
 ---
 
-<img src='h2z.gif' align="right" width=300>
+<img src='/imgs-readme/h2z.gif' align="right" width=300>
 
 <br><br><br>
 ### Cloning and use:
