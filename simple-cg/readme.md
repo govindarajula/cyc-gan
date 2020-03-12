@@ -30,11 +30,13 @@ Along with changes done while training upon the original repo code, changes betw
 * Tweaking these arguments and the obtained results are documented in the final report.
 
 
-#### Some results:
+#### Results:
 
-* For h2z data:
+* Best generated
 
-( Real - Generated - Reconstructed)
+<img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/h.png" width="250" /> <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/z.png" width="250" />
+
+* Re-construction (Real - Generated - Reconstructed)
 
 <p float="left">
   <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/horse_real.png" width="200" />
@@ -42,7 +44,7 @@ Along with changes done while training upon the original repo code, changes betw
   <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/horse_reconstructed.png" width="200" />
 </p>
 
-Batch (--norm) / vgg implementation:
+* Batch (--norm) / vgg implementation
 
 <img src="https://github.com/gvsakashb/cyc-gan/blob/master/simple-cg/results/batch.png" width="400">
 
