@@ -52,7 +52,6 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 
 <img src='/imgs-readme/h2z.gif' align="right" width=300>
 
-<br><br><br>
 ### Cloning and use:
 Clone this repo:
 ```
@@ -127,8 +126,9 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 > The EC2 instance can be shared for evaluation if neeeded. Cloning this repository on a machine with GPU support is an ideal way to run locally, but the AMI can be used to study my results.
 
 #### Observations and results (Re-implementation/pre_trained models):
-* Please refer the [report]() for a detailed explanation about the changes, code and results.
-* Overall, I can state the following:
+
+* Please refer the [report]() for a detailed explanation about the changes in code and results.
+* Overall, we can state the following:
 	1.
 	2.
 	3.
@@ -139,6 +139,13 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 	2.
 	3.
 	
+
+
+### Links and References
+- [Torch-version](https://github.com/junyanz/CycleGAN)
+- [BAIR blog](bair.berkeley.edu/blog/2019/12/13/humans-cyclegan) with recent updates.
+- Some other papers studied are linked in the [explore.md](https://github.com/gvsakashb/cyc-gan/blob/master/explore.md) file.
+
 ### Citation:
 ```
 @inproceedings{CycleGAN2017,
@@ -156,10 +163,3 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
   year={2017}
 }
 ```
-
-### Links and References
-- [Cycle-GAN repo](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-- [Torch-version](https://github.com/junyanz/CycleGAN)
-- GCP [colab notebook](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb).
-- [BAIR blog](bair.berkeley.edu/blog/2019/12/13/humans-cyclegan) with recent updates.
-- Some other papers studied are linked in the [explore.md](https://github.com/gvsakashb/cyc-gan/blob/master/explore.md) documentation.
