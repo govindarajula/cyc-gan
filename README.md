@@ -71,13 +71,21 @@ Install the dependencies:
 
 To train a CycleGAN, before execute the orders in the instructions below, the approach varies if you cloned or are running on AMI.
 
+
+
 #### Pre-trained models can be loaded as follows:
 ```
 !bash ./scripts/download_cyclegan_model.sh monet2photo
 ```
 The datset can be specified at the end as shown. This can be done pre-emptively or in jupyter before start of training.
 * Reimplementation has mostly capitalized on this approach, with modfications and tuning of parameters is done for train.py and the scripts files.
+* Run of pre-trained models has a lot of noise and this is improved by the changes done and training over a large amount of images with more epochs.
+
+<img src='https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/style-initial.png' height=300>
+
 #### Training:
+
+<img src="imgs-readme/logic.png" width="500"> <img src="imgs-readme/reconstruct.png" width="350">
 * 
 ```
 !python train.py --dataroot ./datasets/horse2zebra --name horse2zebra --model cycle_gan
