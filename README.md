@@ -6,7 +6,7 @@ The goal and deliverables of this project relied hevaily on harnessing Cycle-GAN
 > For the scope of this project (as we used MacOS) most of the training and implementation has been done in AWS-based Linux AMI, after setup of the dependencies and tools upon GPU.
  * Scaled and re-implemented the model for horse2zebra, yosemite and style-transfer(Ukiyoe) datasets.
  * Parameter tuning and tabulated results agaisnt varying traina and test conditions. 
-  > --model, --netG, --norm, epochs, lr have been explored agaisnt pre-trained and recursive loops for cyclic iterations.
+  > --model, --netG, --norm, epochs, lr-plocy, etc. have been explored agaisnt pre-trained and recursive loops for cyclic iterations.
  * Reconstruction and generation of input data has been achieved with improvements.
    a. Detail and crisp/clarity has been observed.
    b. Dehazing and reduction of noise is demonstrated upon introducing the proposed loss function.
@@ -37,7 +37,7 @@ A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree
 * PyTorch
 * NVIDIA GPU + CUDA CuDNN
 
-The simpler version harnesses Pytorch with CPU compute power, but can be set to GPU training based on CUDA configuration of local machine. It is highly suggested to use GPU-supported systems.
+> The simpler version harnesses Pytorch with CPU, but can be set to GPU training based on CUDA. It is highly suggested to use GPU for the original models.
 
 ## Architecture
 The baseline model used is CycleGan model, (to generate the images in desired style palette from input and target datasets) is shown below:
@@ -139,13 +139,9 @@ Most of my work and the implementation was hosted on an AWS AMI. The snapshot is
 > The EC2 instance can be shared for evaluation if neeeded as well. Cloning this repository on a machine with GPU support is an ideal way to run locally, but AMI can be used to study my results.
 
 
-### References
-
-- Lee, Minhyeok, and Junhee Seok. "Controllable generative adversarial network." IEEE Access 7 (2019): 28158-28169.
-- Xu, Tao, et al. "Attngan: Fine-grained text to image generation with attentional generative adversarial networks." Proceedings of the IEEE conference on computer vision and pattern recognition. 2018.
-
-### Links
+### Links and References
 - [Cycle-GAN repo](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 - [Torch-version](https://github.com/junyanz/CycleGAN)
 - GCP [colab notebook](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb).
 - [BAIR blog](bair.berkeley.edu/blog/2019/12/13/humans-cyclegan) with recent updates.
+- Some other papers studied are linkedin [explore.md](https://github.com/gvsakashb/cyc-gan/blob/master/explore.md).
