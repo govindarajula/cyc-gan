@@ -118,7 +118,7 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 1. Running from Linux AMI
 	* Public AMI-ID: `ami-0c0752e75eb4d3922`.
-	* Check dependencies before first run.
+	* Check the dependencies before first run of our code.
   	```
 	nvcc --version
 	pip install torch torchvision 
