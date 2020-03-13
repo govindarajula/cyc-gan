@@ -117,7 +117,7 @@ The datset can be specified at the end as shown. This can be done pre-emptively 
 Most of my work and the implementation was hosted on an AWS Deep Learning AMI. The snapshot is available for copy. There are two ways to set up your environment:
 
 1. Running from Linux AMI
-	* Pulic AMI-ID: `ami-018b10d93f5a1041e`.
+	* Pulic AMI-ID: `ami-0c0752e75eb4d3922`.
 	* Check dependencies before first run.
   	```
 	nvcc --version
