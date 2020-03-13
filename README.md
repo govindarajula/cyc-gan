@@ -37,7 +37,9 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 * Repository Code - Notebooks & files under 'reimplement'
 * Improved [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) model 
 * AMI image (with results and ready to train further)
-* [Final report](file.pdf)
+	
+	i. Public AMI ID: `ami-0c0752e75eb4d3922`.
+* [Final report](/report/adl-report-c-gan-akash.pdf)
 * Access Key for the EC2 instance / image (*.pem file*)
 
 #### Requirements / Prerequisites:
