@@ -70,7 +70,9 @@ Install the dependencies:
 To train a CycleGAN, before execute the orders in the instructions below, the approach varies if you cloned or are running on AMI.
 
 
+
 ##### Pre-trained models can be loaded.
+
 Preprocessing involves harnessing the scripts provided from original directory for training and setup of our model.
 ```
 !bash ./scripts/download_cyclegan_model.sh monet2photo
@@ -94,11 +96,6 @@ The datset can be specified at the end as shown. This can be done pre-emptively 
 
 * Upon exploring the under-the-hood architecture, [Adam](https://pytorch.org/docs/stable/optim.html#algorithms) optimizers and loss functions are narrowed down from code and these are modified and studied.
 * A CycleGAN repeats its training process, alternating between training the discriminators and the generators, for a specified number of training iterations.
-
-* The CycleGAN contains two mapping functions $G: X \rightarrow Y$ and $F: Y \rightarrow X$, and associated adversarial discriminators $D_Y$ and $D_X$. 
-(a) $D_Y$ encourages $G$ to translate $X$ into outputs indistinguishable from domain $Y$, and vice versa for $D_X$ and $F$.To further regularize the mappings, we introduce two cycle consistency losses that capture the intuition that if we translate from one domain to the other and back again we should arrive at where we started. 
-(b) Forward cycle-consistency loss &
-(c) backward cycle-consistency loss.
 
 #### Testing Phase
 
@@ -135,7 +132,21 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 > The EC2 instance can be shared for evaluation if neeeded. Cloning this repository on a machine with GPU support is an ideal way to run locally, but the AMI can be used to study my results.
 
+
 #### Observations and Results
+
+* Please refer the [report](report/adl-report.pdf) for a detailed explanation about the changes in code and results.
+* Overall, we can state the following:
+	1.
+	2.
+	3.
+	4.
+	5.
+* Specific to the proposed simple-cg model, we observe:
+	1. The training results are better for instance normalization, with better clarity in images for subsequent model runs.
+	2. 
+	3.
+	
 
 * Please refer the [report](report/adl-report.pdf) for a detailed explanation about the changes in code and results.
 * A [markdown](best-results/readme.md) file inside the best-results directory to illustrate the images generated.
