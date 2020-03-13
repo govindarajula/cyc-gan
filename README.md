@@ -42,6 +42,8 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 * [Final report](/report/adl-report-c-gan-akash.pdf)
 * Access Key for the EC2 instance / image (*.pem file*)
 
+> A docker file has been created (based on link) but for the GPU compute power and volume I used, size is extremely large. It is imperative to harness the AWS image as it trains and delivers faster. Integrating nvidia-ce(cuda support) has been observed as a latency issue as well.
+
 #### Requirements / Prerequisites:
 * Linux or macOS
 * Python 3
@@ -139,9 +141,11 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 #### Observations and Results
 
-* Please refer the [report](report/adl-report.pdf) for a detailed explanation about the changes in code and results.
+* Please refer the [report](report/adl-report.pdf) for a **detailed explanation** about the changes in *code and results*.
 * Specific to simple-cg, the training results are better for instance normalization, with better clarity in images for subsequent model runs.
 * The [folder](/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
+
+<img src="" width='500'>
 
 ### Links and References
 - [Torch-version](https://github.com/junyanz/CycleGAN)
