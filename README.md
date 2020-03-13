@@ -163,4 +163,3 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
   year={2017}
 }
 ```
-<img src="imgs-readme/metrics.png" width=350> <img src="imgs-readme/r50.png" width=450>
