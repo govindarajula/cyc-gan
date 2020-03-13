@@ -4,6 +4,8 @@
 
 ### Project outline
 
+Advisor: Prof. Han Liu
+
 1. Intro: 
 
 The goal and deliverables of this project relied heavily on harnessing Cycle-GAN architecture and improving the architecture.
