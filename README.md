@@ -136,20 +136,8 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 #### Observations and Results
 
 * Please refer the [report](report/adl-report.pdf) for a detailed explanation about the changes in code and results.
-* Overall, we can state the following:
-	1.
-	2.
-	3.
-	4.
-	5.
-* Specific to the proposed simple-cg model, we observe:
-	1. The training results are better for instance normalization, with better clarity in images for subsequent model runs.
-	2. 
-	3.
-	
-
-* Please refer the [report](report/adl-report.pdf) for a detailed explanation about the changes in code and results.
-* A [markdown](best-results/readme.md) file inside the best-results directory to illustrate the images generated.
+* Specific to simple-cg, the training results are better for instance normalization, with better clarity in images for subsequent model runs.
+* The [folder](/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
 
 ### Links and References
 - [Torch-version](https://github.com/junyanz/CycleGAN)
