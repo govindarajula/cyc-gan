@@ -147,6 +147,8 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 * The [folder](/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
 
 <img src="imgs-readme/h2z.png" width="600">
+<img src="imgs-readme/m2p.png" width="600">
+<img src="imgs-readme/yos.png" width="600">
 
 ### Links and References
 - [Torch-version](https://github.com/junyanz/CycleGAN)
