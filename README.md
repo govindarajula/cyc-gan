@@ -145,7 +145,7 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 * Specific to simple-cg, the training results are better for instance normalization, with better clarity in images for subsequent model runs.
 * The [folder](/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
 
-<img src="" width='500'>
+<img src="results/h2z.png" width="500">
 
 ### Links and References
 - [Torch-version](https://github.com/junyanz/CycleGAN)
