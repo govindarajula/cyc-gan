@@ -8,7 +8,7 @@ Advisor: Prof. Han Liu
 
 1. Intro: 
 
-The goal and deliverables of this project relied heavily on harnessing Cycle-GAN architecture and improving the architecture.
+The goal and deliverables of this project relied heavily on harnessing Cycle-GAN and improving the architecture.
 > For the scope of this project (as we used MacOS) most of the training and implementation has been done in AWS-based Linux AMI, after setup of the dependencies and tools upon GPU.
  * Scaling and re-implementation has been done for horse2zebra, yosemite and style-transfer(Ukiyoe) datasets using the model.
  * Parameter tuning against varying train and test conditions is studied and results are tabulated. 
