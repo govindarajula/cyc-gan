@@ -39,7 +39,7 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 * AMI image (with results and ready to train further)
 	
 	i. Public AMI ID: `ami-0c0752e75eb4d3922`.
-* [Final report](/report/adl-final-report.pdf) - please review for studying changes/modifications and obtained results.
+* [Final report](https://github.com/gvsakashb/cyc-gan/blob/master/report/adl-final-report.pdf) - please review for studying changes/modifications and obtained results.
 * Access Key for the EC2 instance / image (*.pem file*)
 
 > A docker file has been created (based on link) but for the GPU compute power and volume I used, size is extremely large. 
