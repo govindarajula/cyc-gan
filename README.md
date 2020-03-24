@@ -22,7 +22,7 @@ A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree
 * One implementation with pre-initialized weights is also studied to note theat convergence occurs faster.
 * Metrics like IoU score, accuracy, quality etc. have achieved comparable results to the BAIR presentation / model.
 
-3. Input: The models take a collection of mages from various datasets.
+3. Input: The models take a collection of images from various datasets.
 
 4. Outputs: An image generated to match the target data, by replicating the style and features of the other data of images.
 
