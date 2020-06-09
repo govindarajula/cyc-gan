@@ -30,16 +30,16 @@ A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree
 ### Architecture
 The baseline model used is CycleGan model, (to generate the images in desired style palette from input and target datasets) is shown below:
 
-<img src="https://github.com/gvsakashb/cyc-gan/blob/master/files/img/G-and-D.png" width="400"><img src="https://github.com/gvsakashb/cyc-gan/blob/master/files/img/network.png" width="400">
+<img src="https://github.com/govindarajula/cyc-gan/blob/master/files/img/G-and-D.png" width="400"><img src="https://github.com/govindarajula/cyc-gan/blob/master/files/img/network.png" width="400">
 
 
 #### Deliverables
 * Repository Code - Notebooks & files under 'reimplement'
-* Improved [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) model 
+* Improved [simple-cg](simple-cg) model 
 * AMI image (with results and ready to train further)
 	
 	i. Public AMI ID: `ami-0c0752e75eb4d3922`.
-* [Final report](https://github.com/govindarajula/cyc-gan/blob/master/report/adl-final-report.pdf)
+* [Final report](cyc-gan.pdf)
 * Access Key for the EC2 instance / image (*.pem file*)
 
 > A docker file has been created (based on link) but for the GPU compute power and volume I used, size is extremely large. 
@@ -57,7 +57,7 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 
 ---
 
-<img src='/imgs-readme/h2z.gif' align="right" width=300>
+<img src='files/img/h2z.gif' align="right" width=300>
 
 #### Cloning and use:
 Clone this repo:
@@ -88,11 +88,11 @@ The datset can be specified at the end as shown. This can be done pre-emptively 
 * Reimplementation has mostly capitalized on this approach, with modfications and tuning of parameters is done for train.py and the scripts files.
 * Run of pre-trained models has a lot of noise and this is improved by the changes done and training over a large amount of images with more epochs.
 
-<img src='https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/style-initial.png' height=250>
+<img src='files/img/style-initial.png' height=250>
 
 ##### Train:
 
-<img src="imgs-readme/logic.png" width="500"> <img src="imgs-readme/reconstruct.png" width="350">
+<img src="files/img/logic.png" width="500"> <img src="files/img/reconstruct.png" width="350">
 * 
 ```
 !python train.py --dataroot ./datasets/horse2zebra --name horse2zebra --model cycle_gan
@@ -142,13 +142,13 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 #### Observations and Results
 
-* Please refer the [report](report/adl-report.pdf) for a **detailed explanation** about the changes in *code and results*.
+* Please refer the [report](cyc-gan.pdf) for a **detailed explanation** about the changes in *code and results*.
 * Specific to simple-cg, the training results are better for instance normalization, with better clarity in images for subsequent model runs.
-* The [folder](/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
+* The [folder](/files/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
 
-<img src="imgs-readme/h2z.png" width="600">
-<img src="imgs-readme/m2p.png" width="600">
-<img src="imgs-readme/yos.png" width="600">
+<img src="files/img/h2z.png" width="600">
+<img src="files/img/m2p.png" width="600">
+<img src="files/img/yos.png" width="600">
 
 ### Links and References
 - [Torch-version](https://github.com/junyanz/CycleGAN)
