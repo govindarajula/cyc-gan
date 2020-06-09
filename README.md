@@ -30,7 +30,7 @@ A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree
 ### Architecture
 The baseline model used is CycleGan model, (to generate the images in desired style palette from input and target datasets) is shown below:
 
-<img src="https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/G-and-D.png" width="400"><img src="https://github.com/gvsakashb/cyc-gan/blob/master/imgs-readme/network.png" width="400">
+<img src="https://github.com/gvsakashb/cyc-gan/blob/master/files/img/G-and-D.png" width="400"><img src="https://github.com/gvsakashb/cyc-gan/blob/master/files/img/network.png" width="400">
 
 
 #### Deliverables
