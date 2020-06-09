@@ -18,7 +18,7 @@ The goal and deliverables of this project relied heavily on harnessing Cycle-GAN
 2. Modifications:
 A separate directory under [simple-cg](https://github.com/gvsakashb/cyc-gan/tree/master/simple-cg) has modified architecture, (with helper and util functions, pre-trained models narrowed down to 4 .py files). This model has achieved significantly higher detail in images generated and has been used to tabulate and study loss (D, G) for comparative analytics against changes of baseline architecture.
 
-* Pre-trained and reimplementation has some modified code which achieved better with a colo-rbased loss term, thereby tackling issue of hue/tint in style-transfer image data.
+* Pre-trained and reimplementation has some modified code which achieved better with a color-based loss term, thereby tackling issue of hue/tint in style-transfer image data.
 * One implementation with pre-initialized weights is also studied to note theat convergence occurs faster.
 * Metrics like IoU score, accuracy, quality etc. have achieved comparable results to the BAIR presentation / model.
 
@@ -39,7 +39,7 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 * AMI image (with results and ready to train further)
 	
 	i. Public AMI ID: `ami-0c0752e75eb4d3922`.
-* [Final report](cyc-gan.pdf)
+* [Final report](files/cyc-gan.pdf)
 * Access Key for the EC2 instance / image (*.pem file*)
 
 > A docker file has been created (based on link) but for the GPU compute power and volume I used, size is extremely large. 
@@ -142,7 +142,7 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 #### Observations and Results
 
-* Please refer the [report](cyc-gan.pdf) for a **detailed explanation** about the changes in *code and results*.
+* Please refer the [report](files/cyc-gan.pdf) for a **detailed explanation** about the changes in *code and results*.
 * Specific to simple-cg, the training results are better for instance normalization, with better clarity in images for subsequent model runs.
 * The [folder](/files/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
 
@@ -153,7 +153,7 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 ### Links and References
 - [Torch-version](https://github.com/junyanz/CycleGAN)
 - [BAIR blog](bair.berkeley.edu/blog/2019/12/13/humans-cyclegan) with recent updates.
-- Some other papers studied are linked in the [explore.md](https://github.com/gvsakashb/cyc-gan/blob/master/explore.md) file.
+- Some other papers studied are linked in the explore.md file in simple-cg folder.
 
 ### Citation:
 ```
