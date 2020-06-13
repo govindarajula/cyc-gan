@@ -39,7 +39,7 @@ The baseline model used is CycleGan model, (to generate the images in desired st
 * AMI image (with results and ready to train further)
 	
 	i. Public AMI ID: `ami-0c0752e75eb4d3922`.
-* [Final report](files/cyc-gan.pdf)
+* [Final report](cyc-gan.pdf)
 * Access Key for the EC2 instance / image (*.pem file*)
 
 > A docker file has been created (based on link) but for the GPU compute power and volume I used, size is extremely large. 
@@ -142,7 +142,7 @@ Most of my work and the implementation was hosted on an AWS Deep Learning AMI. T
 
 #### Observations and Results
 
-* Please refer the [report](files/cyc-gan.pdf) for a **detailed explanation** about the changes in *code and results*.
+* Please refer the [report](cyc-gan.pdf) for a **detailed explanation** about the changes in *code and results*.
 * Specific to simple-cg, the training results are better for instance normalization, with better clarity in images for subsequent model runs.
 * The [folder](/files/best-results) has some of the best generated images from various iterations and re-runs/designed models. Kindly check the same to see some interesting results and improvements in contrast to a typical/baseline model.
 
